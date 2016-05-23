@@ -1,0 +1,17 @@
+{
+  "name": "canvas-to-image",
+  "homepage": "https://github.com/kaxi1993/canvas-to-image",
+  "authors": [
+    "kaxi1993 <kakhidze2012@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
