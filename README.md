@@ -1,11 +1,9 @@
 # canvas-to-image
 
-```bash
 **canvas-to-image** extends [FileSaver](https://github.com/eligrey/FileSaver.js/) and simplifies way to download canvas as image.
 
 **canvas-to-image** can be used for web-apps and also can be used for working with [node-webkit](https://github.com/nwjs/nw.js)
 
-```
 
 ## Instalation
 
@@ -25,7 +23,6 @@ $ npm install canvas-to-image
 
 ## The MIT License (MIT)
 
-```bash
 Copyright (c) 2016 Lasha Kakhidze
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,6 +42,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kaxi1993/canvas-to-image/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
