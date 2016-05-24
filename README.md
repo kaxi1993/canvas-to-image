@@ -15,6 +15,8 @@ $ bower install canvas-to-image
 
 ## Quick Start
 
+downloadAs('canvasID', 'imageName', 'imageType');
+
 **Download as jpg**
 ```bash
 downloadAs('my-canvas', 'myImage', 'jpg');
@@ -28,7 +30,7 @@ downloadAs('my-canvas'); // default type png, name image
 
 ## Example
 
-```bash
+```html
 <html>
 <head></head>
 <body>
