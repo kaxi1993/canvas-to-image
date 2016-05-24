@@ -1,6 +1,6 @@
 {
   "name": "canvas-to-image",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Library to convert canvas to image easily",
   "description": "[![BOWER version](https://badge-me.herokuapp.com/api/bower/kaxi1993/canvas-to-image.png)](http://badges.enytc.com/for/bower/kaxi1993/canvas-to-image)",
   "main": "index.js",
