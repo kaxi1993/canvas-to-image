@@ -1,6 +1,6 @@
 # canvas-to-image
 
-[![BOWER version](https://badge-me.herokuapp.com/api/bower/kaxi1993/canvas-to-image.png)](http://badges.enytc.com/for/bower/kaxi1993/canvas-to-image)
+[![Bower version](https://badge.fury.io/bo/canvas-to-image.svg)](https://badge.fury.io/bo/canvas-to-image)
 
 **canvas-to-image** extends [FileSaver](https://github.com/eligrey/FileSaver.js/) and simplifies way to download canvas as image.
 
