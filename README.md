@@ -11,6 +11,7 @@
 
 ```bash
 $ bower install canvas-to-image
+$ npm install canvas-to-image
 ```
 
 ## Quick Start

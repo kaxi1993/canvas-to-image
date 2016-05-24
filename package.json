@@ -1,0 +1,20 @@
+{
+  "name": "canvas-to-image",
+  "version": "1.0.0",
+  "description": "Library to convert canvas to image easily",
+  "description": "[![BOWER version](https://badge-me.herokuapp.com/api/bower/kaxi1993/canvas-to-image.png)](http://badges.enytc.com/for/bower/kaxi1993/canvas-to-image)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaxi1993/canvas-to-image.git"
+  },
+  "author": " <kakhidze2012@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaxi1993/canvas-to-image/issues"
+  },
+  "homepage": "https://github.com/kaxi1993/canvas-to-image#readme"
+}
