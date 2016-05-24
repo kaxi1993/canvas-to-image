@@ -1,5 +1,7 @@
 # canvas-to-image
 
+[![BOWER version](https://badge-me.herokuapp.com/api/bower/kaxi1993/canvas-to-image.png)](http://badges.enytc.com/for/bower/kaxi1993/canvas-to-image)
+
 **canvas-to-image** extends [FileSaver](https://github.com/eligrey/FileSaver.js/) and simplifies way to download canvas as image.
 
 **canvas-to-image** can be used for web-apps and also can be used for working with [node-webkit](https://github.com/nwjs/nw.js)
@@ -8,7 +10,7 @@
 ## Instalation
 
 ```bash
-$ npm install canvas-to-image
+$ bower install canvas-to-image
 ```
 
 ## Quick Start
@@ -16,7 +18,7 @@ $ npm install canvas-to-image
 ```bash
 ```
 
-## Examples
+## Example
 
 ```bash
 ```
