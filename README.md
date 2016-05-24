@@ -15,12 +15,59 @@ $ bower install canvas-to-image
 
 ## Quick Start
 
+### Download as jpg
 ```bash
+downloadAs('my-canvas', 'myImage', 'jpg');
+```
+### Download as png
+```bash
+downloadAs('my-canvas', 'myImage', 'png');
+or
+downloadAs('my-canvas'); // default type png, name image
 ```
 
 ## Example
 
 ```bash
+<html>
+<head></head>
+<body>
+	<canvas id="my-canvas"></canvas>
+	<button id="download-jpg"> Download as JPG </button>
+	<button id="download-png"> Download as PNG </button>
+
+	<script>
+		var canvas = document.getElementById('my-canvas');
+		var context = canvas.getContext('2d');
+		var centerX = canvas.width / 2;
+		var centerY = canvas.height / 2;
+		var radius = 50;
+
+		context.fillStyle = '#00FF00';
+
+		//draw background / rect on entire canvas
+		context.fillRect(0, 0, canvas.width, canvas.height);
+
+		context.beginPath();
+		context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+		context.fillStyle = '#FF0000';
+		context.fill();
+	</script>
+
+	<script src="canvas-to-image.min.js"></script>
+	<script>
+		document.getElementById('download-jpg')
+		.addEventListener('click', function() {
+			downloadAs('my-canvas', 'myImage', 'jpg');
+		});
+
+		document.getElementById('download-png')
+		.addEventListener('click', function() {
+			downloadAs('my-canvas');
+		});
+	</script>
+</body>
+</html>
 ```
 
 ## The MIT License (MIT)
