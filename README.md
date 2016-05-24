@@ -16,7 +16,9 @@ $ npm install canvas-to-image
 
 ## Quick Start
 
+```bash
 downloadAs(canvasID, imageName, imageType);
+```
 
 **Download as jpg**
 ```bash
