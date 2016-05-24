@@ -1,5 +1,7 @@
 {
   "name": "canvas-to-image",
+  "version": "1.0.0",
+  "description": "Library to convert canvas to image easily",
   "homepage": "https://github.com/kaxi1993/canvas-to-image",
   "authors": [
     "kaxi1993 <kakhidze2012@gmail.com>"
