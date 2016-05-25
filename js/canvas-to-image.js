@@ -325,7 +325,7 @@ var downloadAs = downloadAs || (function() {
 
 
 if (typeof module !== "undefined" && module.exports) {
-  module.exports.downloadAs = downloadAs;
+  module.exports = downloadAs;
 } else if ((typeof define !== "undefined" && define !== null) && (define.amd !== null)) {
   define([], function() {
     return downloadAs;

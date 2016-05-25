@@ -32,7 +32,7 @@ or
 downloadAs('my-canvas'); // default type png, name image
 ```
 
-## Example
+## Examples
 
 ```html
 <html>
@@ -49,6 +49,31 @@ downloadAs('my-canvas'); // default type png, name image
 </body>
 </html>
 ```
+
+```bash
+or using browserify
+browserify -r canvas-to-image > bundle.js
+```
+
+```html
+<html>
+<head></head>
+<body>
+	<canvas id="my-canvas"></canvas>
+
+
+	<script src="bundle.js"></script>
+	<script>
+		var downloadAs = require('canvas-to-image');
+		
+		downloadAs('my-canvas', 'myImage', 'jpg');
+
+	    downloadAs('my-canvas');
+	</script>
+</body>
+</html>
+```
+
 
 ## The MIT License (MIT)
 
