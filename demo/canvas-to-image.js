@@ -283,9 +283,10 @@ var downloadAs = downloadAs || (function() {
 		return blob;
 	}
 
-	function downloadAsJPG(imageCanvas, name) {
+	function downloadAsJPG(imageCanvas, name, quality) {
 		name = name + '.jpg';
-		var dt = imageCanvas.toDataURL('image/jpeg', 1);
+		
+		var dt = imageCanvas.toDataURL('image/jpeg', quality);
 
 		dt = dt.replace(/^data:image\/jpeg;base64,/, '');
 
@@ -294,9 +295,10 @@ var downloadAs = downloadAs || (function() {
 		saveAs(newdt, name);
 	}
 
-	function downloadAsPNG(imageCanvas, name) {
+	function downloadAsPNG(imageCanvas, name, quality) {
 		name = name + '.png';
-		var dt = imageCanvas.toDataURL();
+
+		var dt = imageCanvas.toDataURL('image/png', quality);
 
 		dt = dt.replace(/^data:image\/png;base64,/, '');
 
@@ -305,18 +307,26 @@ var downloadAs = downloadAs || (function() {
 		saveAs(newdt, name);
 	}
 
-	var downloadAs = function(canvasId, name, type) {
-		var imageCanvas = document.getElementById(canvasId);
-		name = name || 'image';
-		
-		if(type) {
-			type = type.toLowerCase();
+	var downloadAs = function(canvasId, options, type) {
+		// in order to support old code
+		var quality;
+
+		if(typeof options === 'object') {
+			name = options.name || 'image';
+			type = options.type || 'png';
+			quality = options.quality || 1;
+		} else {
+			name = options || 'image';
+			type = type || 'png';
 		}
 
+		var imageCanvas = document.getElementById(canvasId);
+		type = type.toLowerCase();
+
 		switch(type) {
-			case 'jpg': downloadAsJPG(imageCanvas, name); break;
-			case 'png': downloadAsPNG(imageCanvas, name); break;
-			default: downloadAsPNG(imageCanvas, name);
+			case 'jpg': downloadAsJPG(imageCanvas, name, quality); break;
+			case 'png': downloadAsPNG(imageCanvas, name, quality); break;
+			default: downloadAsPNG(imageCanvas, name, quality);
 		}
 	}
 

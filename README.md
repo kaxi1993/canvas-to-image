@@ -11,25 +11,42 @@
 ## Instalation
 
 ```bash
-$ bower install canvas-to-image
 $ npm install canvas-to-image
+$ bower install canvas-to-image
 ```
 
 ## Quick Start
 
 ```bash
-downloadAs(canvasID, imageName, imageType);
+downloadAs(canvasId, options);
+
+options = {
+	name: 'custom name', 	// default image
+	type: 'jpg', 			// default png, accepted values jpg or png
+	quality: '0.4'			// default 1, can select any value from 0 to 1 interval
+}
+
 ```
 
 **Download as jpg**
 ```bash
-downloadAs('my-canvas', 'myImage', 'jpg');
+downloadAs('my-canvas', {
+	name: 'myImage',
+	type: 'jpg',
+	quality: 0.7
+});
 ```
 **Download as png**
 ```bash
-downloadAs('my-canvas', 'myImage', 'png');
+downloadAs('my-canvas', {
+	name: 'myImage',
+	type: 'png',
+	quality: 1
+});
+
 or
-downloadAs('my-canvas'); // default type png, name image
+
+downloadAs('my-canvas');
 ```
 
 ## Examples
@@ -42,9 +59,19 @@ downloadAs('my-canvas'); // default type png, name image
 	...
 	<script src="/canvas-to-image/js/canvas-to-image.min.js"></script>
 	<script>
-	    downloadAs('my-canvas', 'myImage', 'jpg');
+		downloadAs('my-canvas', {
+			name: 'myJPG',
+			type: 'jpg',
+			quality: 0.5,
+		});
 
-	    downloadAs('my-canvas');
+		downloadAs('my-canvas', { 
+			name: 'myPNG',
+			type: 'png',
+			quality: 1,
+		});
+
+		downloadAs('my-canvas', {});
 	</script>
 </body>
 </html>
@@ -60,15 +87,24 @@ browserify -r canvas-to-image > bundle.js
 <head></head>
 <body>
 	<canvas id="my-canvas"></canvas>
-
-
+	...
 	<script src="bundle.js"></script>
 	<script>
 		var downloadAs = require('canvas-to-image');
-		
-		downloadAs('my-canvas', 'myImage', 'jpg');
 
-	    downloadAs('my-canvas');
+		downloadAs('my-canvas', {
+			name: 'myJPG',
+			type: 'jpg',
+			quality: 0.5,
+		});
+
+		downloadAs('my-canvas', { 
+			name: 'myPNG',
+			type: 'png',
+			quality: 1,
+		});
+
+		downloadAs('my-canvas', {});
 	</script>
 </body>
 </html>

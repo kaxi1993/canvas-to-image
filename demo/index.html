@@ -1,7 +1,7 @@
 <html>
 <head></head>
 <body>
-	<canvas id="my-canvas"></canvas>
+	<canvas id="my-canvas" width="500" height="500"></canvas>
 
 	<script>
 		var canvas = document.getElementById('my-canvas');
@@ -12,8 +12,19 @@
 
 	<script src="canvas-to-image.min.js"></script>
 	<script>
-		downloadAs('my-canvas', 'myImage', 'jpg');
-		downloadAs('my-canvas');
+		downloadAs('my-canvas', {
+			name: 'myJPG',
+			type: 'jpg',
+			quality: 0.5,
+		});
+
+		downloadAs('my-canvas', { 
+			name: 'myPNG',
+			type: 'png',
+			quality: 1,
+		});
+
+		downloadAs('my-canvas', {});
 	</script>
 </body>
 </html>
