@@ -21,9 +21,9 @@ $ bower install canvas-to-image
 downloadAs(canvasId, options);
 
 options = {
-	name: 'custom name', 	// default image
-	type: 'jpg', 			// default png, accepted values jpg or png
-	quality: '0.4'			// default 1, can select any value from 0 to 1 interval
+    name: 'custom name', // default image
+    type: 'jpg',         // default png, accepted values jpg or png
+    quality: '0.4'       // default 1, can select any value from 0 to 1 interval
 }
 
 ```
@@ -31,17 +31,17 @@ options = {
 **Download as jpg**
 ```bash
 downloadAs('my-canvas', {
-	name: 'myImage',
-	type: 'jpg',
-	quality: 0.7
+    name: 'myImage',
+    type: 'jpg',
+    quality: 0.7
 });
 ```
 **Download as png**
 ```bash
 downloadAs('my-canvas', {
-	name: 'myImage',
-	type: 'png',
-	quality: 1
+    name: 'myImage',
+    type: 'png',
+    quality: 1
 });
 
 or
@@ -55,24 +55,24 @@ downloadAs('my-canvas');
 <html>
 <head></head>
 <body>
-	<canvas id="my-canvas"></canvas>
-	...
-	<script src="/canvas-to-image/js/canvas-to-image.min.js"></script>
-	<script>
-		downloadAs('my-canvas', {
-			name: 'myJPG',
-			type: 'jpg',
-			quality: 0.5,
-		});
+    <canvas id="my-canvas"></canvas>
+    ...
+    <script src="/canvas-to-image/js/canvas-to-image.min.js"></script>
+    <script>
+        downloadAs('my-canvas', {
+            name: 'myJPG',
+            type: 'jpg',
+            quality: 0.5
+        });
 
-		downloadAs('my-canvas', { 
-			name: 'myPNG',
-			type: 'png',
-			quality: 1,
-		});
-
-		downloadAs('my-canvas', {});
-	</script>
+        downloadAs('my-canvas', { 
+            name: 'myPNG',
+            type: 'png',
+            quality: 1
+        });
+        
+        downloadAs('my-canvas', {});
+    </script>
 </body>
 </html>
 ```
@@ -86,26 +86,24 @@ browserify -r canvas-to-image > bundle.js
 <html>
 <head></head>
 <body>
-	<canvas id="my-canvas"></canvas>
-	...
-	<script src="bundle.js"></script>
-	<script>
-		var downloadAs = require('canvas-to-image');
+    <canvas id="my-canvas"></canvas>
+    ...
+    <script src="bundle.js"></script>
+    <script>
+        downloadAs('my-canvas', {
+            name: 'myJPG',
+            type: 'jpg',
+            quality: 0.5
+        });
 
-		downloadAs('my-canvas', {
-			name: 'myJPG',
-			type: 'jpg',
-			quality: 0.5,
-		});
-
-		downloadAs('my-canvas', { 
-			name: 'myPNG',
-			type: 'png',
-			quality: 1,
-		});
-
-		downloadAs('my-canvas', {});
-	</script>
+        downloadAs('my-canvas', { 
+            name: 'myPNG',
+            type: 'png',
+            quality: 1
+        });
+        
+        downloadAs('my-canvas', {});
+    </script>
 </body>
 </html>
 ```
