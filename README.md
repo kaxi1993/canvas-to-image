@@ -1,7 +1,7 @@
 # canvas-to-image
 
 [![npm version](https://badge.fury.io/js/canvas-to-image.svg)](https://badge.fury.io/js/canvas-to-image)
-[![npm](https://img.shields.io/npm/dt/express.svg?maxAge=2592000)](https://www.npmjs.com/package/canvas-to-image)
+[![npm](https://img.shields.io/npm/dt/canvas-to-image.svg?maxAge=2592000)](https://www.npmjs.com/package/canvas-to-image)
 [![Bower version](https://badge.fury.io/bo/canvas-to-image.svg)](https://badge.fury.io/bo/canvas-to-image)
 
 **canvas-to-image** extends [FileSaver](https://github.com/eligrey/FileSaver.js/) and simplifies way to download canvas as image.
