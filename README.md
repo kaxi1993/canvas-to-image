@@ -14,7 +14,7 @@ $ npm install canvas-to-image
 
 ## Quick Start
 
-```bash
+```js
 import canvasToImage from 'canvas-to-image';
 
 canvasToImage(canvasId, options);
@@ -28,7 +28,7 @@ options = {
 ```
 
 **Download as jpg**
-```bash
+```js
 canvasToImage('my-canvas', {
   name: 'myImage',
   type: 'jpg',
@@ -36,7 +36,7 @@ canvasToImage('my-canvas', {
 });
 ```
 **Download as png**
-```bash
+```js
 canvasToImage('my-canvas', {
   name: 'myImage',
   type: 'png',
