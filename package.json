@@ -1,8 +1,8 @@
 {
   "name": "canvas-to-image",
-  "version": "1.1.4",
-  "description": "Canvas to image converter, works with web apps and node-webkit",
-  "main": "js/canvas-to-image.js",
+  "version": "2.0.0",
+  "description": "Save Canvas as Image",
+  "main": "js/canvas-to-image.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

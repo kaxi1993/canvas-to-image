@@ -4,50 +4,48 @@
 [![npm](https://img.shields.io/npm/dt/canvas-to-image.svg?maxAge=2592000)](https://www.npmjs.com/package/canvas-to-image)
 [![Bower version](https://badge.fury.io/bo/canvas-to-image.svg)](https://badge.fury.io/bo/canvas-to-image)
 
-**canvas-to-image** extends [FileSaver](https://github.com/eligrey/FileSaver.js/) and simplifies way to download canvas as image.
-
-**canvas-to-image** can be used for web-apps and also can be used for working with [node-webkit](https://github.com/nwjs/nw.js)
-
+**canvas-to-image** extends [FileSaver](https://github.com/eligrey/FileSaver.js/) and simplifies way to save canvas as image.
 
 ## Instalation
 
 ```bash
 $ npm install canvas-to-image
-$ bower install canvas-to-image
 ```
 
 ## Quick Start
 
-```bash
-downloadAs(canvasId, options);
+```js
+import canvasToImage from 'canvas-to-image';
+
+canvasToImage(canvasId, options);
 
 options = {
-    name: 'custom name', // default image
-    type: 'jpg',         // default png, accepted values jpg or png
-    quality: 0.4         // default 1, can select any value from 0 to 1 interval
+  name: 'custom name', // default image
+  type: 'jpg',         // default png, accepted values jpg or png
+  quality: 0.4         // default 1, can select any value from 0 to 1 interval
 }
 
 ```
 
 **Download as jpg**
-```bash
-downloadAs('my-canvas', {
-    name: 'myImage',
-    type: 'jpg',
-    quality: 0.7
+```js
+canvasToImage('myCanvas', {
+  name: 'myImage',
+  type: 'jpg',
+  quality: 0.7
 });
 ```
 **Download as png**
-```bash
-downloadAs('my-canvas', {
-    name: 'myImage',
-    type: 'png',
-    quality: 1
+```js
+canvasToImage('myCanvas', {
+  name: 'myImage',
+  type: 'png',
+  quality: 1
 });
 
 or
 
-downloadAs('my-canvas');
+canvasToImage('myCanvas');
 ```
 
 ## Examples
@@ -56,59 +54,27 @@ downloadAs('my-canvas');
 <html>
 <head></head>
 <body>
-    <canvas id="my-canvas"></canvas>
-    ...
-    <script src="/canvas-to-image/js/canvas-to-image.min.js"></script>
-    <script>
-        downloadAs('my-canvas', {
-            name: 'myJPG',
-            type: 'jpg',
-            quality: 0.5
-        });
+  <canvas id="myCanvas"></canvas>
+  ...
+  <script src="/canvas-to-image/js/canvas-to-image.min.js"></script>
+  <script>
+  canvasToImage('myCanvas', {
+    name: 'myJPG',
+    type: 'jpg',
+    quality: 0.5
+  });
 
-        downloadAs('my-canvas', { 
-            name: 'myPNG',
-            type: 'png',
-            quality: 1
-        });
-        
-        downloadAs('my-canvas', {});
-    </script>
+  canvasToImage('myCanvas', { 
+    name: 'myPNG',
+    type: 'png',
+    quality: 1
+  });
+
+  canvasToImage('myCanvas');
+  </script>
 </body>
 </html>
 ```
-
-```bash
-or using browserify
-browserify -r canvas-to-image > bundle.js
-```
-
-```html
-<html>
-<head></head>
-<body>
-    <canvas id="my-canvas"></canvas>
-    ...
-    <script src="bundle.js"></script>
-    <script>
-        downloadAs('my-canvas', {
-            name: 'myJPG',
-            type: 'jpg',
-            quality: 0.5
-        });
-
-        downloadAs('my-canvas', { 
-            name: 'myPNG',
-            type: 'png',
-            quality: 1
-        });
-        
-        downloadAs('my-canvas', {});
-    </script>
-</body>
-</html>
-```
-
 
 ## The MIT License (MIT)
 
@@ -131,5 +97,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kaxi1993/canvas-to-image/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
