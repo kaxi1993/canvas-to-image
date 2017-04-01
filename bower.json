@@ -1,13 +1,12 @@
 {
   "name": "canvas-to-image",
-  "version": "1.1.4",
-  "description": "Library to convert canvas to image easily",
+  "version": "2.0.0",
+  "description": "Save Canvas as Image",
   "homepage": "https://github.com/kaxi1993/canvas-to-image",
   "authors": [
     "kaxi1993 <kakhidze2012@gmail.com>"
   ],
-  "description": "",
-  "main": "",
+  "main": "js/canvas-to-image.min.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
