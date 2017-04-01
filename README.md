@@ -70,7 +70,7 @@ canvasToImage('my-canvas');
     quality: 1
   });
 
-  canvasToImage('my-canvas', {});
+  canvasToImage('my-canvas');
   </script>
 </body>
 </html>
