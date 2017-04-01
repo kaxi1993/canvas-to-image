@@ -29,7 +29,7 @@ options = {
 
 **Download as jpg**
 ```js
-canvasToImage('my-canvas', {
+canvasToImage('myCanvas', {
   name: 'myImage',
   type: 'jpg',
   quality: 0.7
@@ -37,7 +37,7 @@ canvasToImage('my-canvas', {
 ```
 **Download as png**
 ```js
-canvasToImage('my-canvas', {
+canvasToImage('myCanvas', {
   name: 'myImage',
   type: 'png',
   quality: 1
@@ -45,7 +45,7 @@ canvasToImage('my-canvas', {
 
 or
 
-canvasToImage('my-canvas');
+canvasToImage('myCanvas');
 ```
 
 ## Examples
@@ -54,23 +54,23 @@ canvasToImage('my-canvas');
 <html>
 <head></head>
 <body>
-  <canvas id="my-canvas"></canvas>
+  <canvas id="myCanvas"></canvas>
   ...
   <script src="/canvas-to-image/js/canvas-to-image.min.js"></script>
   <script>
-  canvasToImage('my-canvas', {
+  canvasToImage('myCanvas', {
     name: 'myJPG',
     type: 'jpg',
     quality: 0.5
   });
 
-  canvasToImage('my-canvas', { 
+  canvasToImage('myCanvas', { 
     name: 'myPNG',
     type: 'png',
     quality: 1
   });
 
-  canvasToImage('my-canvas');
+  canvasToImage('myCanvas');
   </script>
 </body>
 </html>
