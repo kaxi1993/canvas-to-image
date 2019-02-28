@@ -1,6 +1,6 @@
 {
   "name": "canvas-to-image",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Save Canvas as Image",
   "main": "js/canvas-to-image.min.js",
   "scripts": {
@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/kaxi1993/canvas-to-image.git"
   },
+  "keywords": [
+    "canvas",
+    "image",
+    "download"
+  ],
   "author": " <kakhidze2012@gmail.com>",
   "license": "MIT",
   "bugs": {
