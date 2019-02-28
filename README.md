@@ -6,7 +6,7 @@
 
 **canvas-to-image** extends [FileSaver](https://github.com/eligrey/FileSaver.js/) and simplifies way to save canvas as image.
 
-## Instalation
+## Installation
 
 ```bash
 $ npm install canvas-to-image
