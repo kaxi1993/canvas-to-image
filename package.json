@@ -1,6 +1,6 @@
 {
   "name": "canvas-to-image",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Save Canvas as Image",
   "main": "js/canvas-to-image.min.js",
   "scripts": {
