@@ -21,7 +21,7 @@ canvasToImage(canvasId, options);
 options = {
   name: 'custom name', // default image
   type: 'jpg',         // default png, accepted values jpg or png
-  quality: 0.4         // default 1, can select any value from 0 to 1 interval
+  quality: 0.4         // default 1, can select any value from 0 to 1 range
 }
 
 ```
