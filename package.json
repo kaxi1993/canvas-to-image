@@ -4,7 +4,6 @@
   "description": "Save Canvas as Image",
   "main": "js/canvas-to-image.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
