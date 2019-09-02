@@ -43,7 +43,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@kaxi1993'
       - run: |
-          npm config set @types:registry https://npm.pkg.github.com/
+          npm set registry https://npm.pkg.github.com/
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}
