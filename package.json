@@ -9,9 +9,6 @@
     "type": "git",
     "url": "git+https://github.com/kaxi1993/canvas-to-image.git"
   },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
-  },
   "keywords": [
     "canvas",
     "image",
