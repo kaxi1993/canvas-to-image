@@ -9,7 +9,7 @@
     "url": "git+https://github.com/kaxi1993/canvas-to-image.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com/@kaxi1993"
   },
   "keywords": [
     "canvas",
