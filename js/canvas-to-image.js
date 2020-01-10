@@ -256,7 +256,7 @@ var canvasToImage = canvasToImage || (function(view) {
 	}());
 
 	var b64toBlob = function(b64Data, contentType, sliceSize) {
-		contentType = contentType || '';
+		contentType = contentType || "";
 		sliceSize = sliceSize || 512;
 		var byteCharacters = atob(b64Data);
 		var byteArrays = [];
@@ -273,35 +273,34 @@ var canvasToImage = canvasToImage || (function(view) {
 		return blob;
 	}
 	var downloadAsJPG = function(imageCanvas, name, quality) {
-		name = name + '.jpg';
-		var dt = imageCanvas.toDataURL('image/jpeg', quality);
-		dt = dt.replace(/^data:image\/jpeg;base64,/, '');
-		var newdt = b64toBlob(dt, 'image/jpeg');
+		name = name + ".jpg";
+		var dt = imageCanvas.toDataURL("image/jpeg", quality);
+		dt = dt.replace(/^data:image\/jpeg;base64,/, "");
+		var newdt = b64toBlob(dt, "image/jpeg");
 		saveAs(newdt, name);
 	}
 	var downloadAsPNG = function(imageCanvas, name, quality) {
-		name = name + '.png';
-		var dt = imageCanvas.toDataURL('image/png', quality);
-		dt = dt.replace(/^data:image\/png;base64,/, '');
-		var newdt = b64toBlob(dt, 'image/png');
+		name = name + ".png";
+		var dt = imageCanvas.toDataURL("image/png", quality);
+		dt = dt.replace(/^data:image\/png;base64,/, "");
+		var newdt = b64toBlob(dt, "image/png");
 		saveAs(newdt, name);
 	}
 	var canvasToImage = function(canvasId, options, type) {
-		// in order to support old code
+		// In order to support old code
 		var quality;
-		if(typeof options === 'object') {
-			name = options.name || 'image';
-			type = options.type || 'png';
+		if(typeof options === "object") {
+			name = options.name || "image";
+			type = options.type || "png";
 			quality = options.quality || 1;
 		} else {
-			name = options || 'image';
-			type = type || 'png';
+			name = options || "image";
+			type = type || "png";
 		}
 		var imageCanvas = document.getElementById(canvasId);
 		type = type.toLowerCase();
 		switch(type) {
-			case 'jpg': downloadAsJPG(imageCanvas, name, quality); break;
-			case 'png': downloadAsPNG(imageCanvas, name, quality); break;
+			case "jpg": downloadAsJPG(imageCanvas, name, quality); break;
 			default: downloadAsPNG(imageCanvas, name, quality);
 		}
 	}

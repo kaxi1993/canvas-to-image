@@ -1,6 +1,6 @@
 {
   "name": "canvas-to-image",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Save Canvas as Image",
   "main": "js/canvas-to-image.min.js",
   "scripts": {},
@@ -13,8 +13,17 @@
   },
   "keywords": [
     "canvas",
+    "img",
     "image",
-    "download"
+    "images",
+    "download",
+    "png",
+    "jpg",
+    "jpeg",
+    "blob",
+    "base64",
+    "convert"
+    "export"
   ],
   "author": " <kakhidze2012@gmail.com>",
   "license": "MIT",

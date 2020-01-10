@@ -4,27 +4,27 @@
 	<canvas id="myCanvas" width="500" height="500"></canvas>
 
 	<script>
-	var canvas = document.getElementById('myCanvas');
-	var context = canvas.getContext('2d');
-	context.fillStyle = '#00FF00';
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	context.fillStyle = '#FF0000';
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	</script>
 
-	<script src="canvas-to-image.min.js"></script>
+	<script src="../js/canvas-to-image.min.js"></script>
 	<script>
-	canvasToImage('myCanvas', {
-		name: 'myJPG',
-		type: 'jpg',
+	canvasToImage("myCanvas", {
+		name: "myJPG",
+		type: "jpg",
 		quality: 0.5,
 	});
 
-	canvasToImage('myCanvas', { 
-		name: 'myPNG',
-		type: 'png',
+	canvasToImage("myCanvas", { 
+		name: "myPNG",
+		type: "png",
 		quality: 1,
 	});
 
-	canvasToImage('myCanvas');
+	canvasToImage("myCanvas");
 	</script>
 </body>
 </html>
