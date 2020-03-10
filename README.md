@@ -14,7 +14,7 @@ $ npm install canvas-to-image
 or 
 
 ```bash
-$ npm install @kaxi1993/canvas-to-image@2.1.0
+$ npm install @kaxi1993/canvas-to-image@2.2.0
 ```
 
 ## Quick Start
@@ -22,7 +22,9 @@ $ npm install @kaxi1993/canvas-to-image@2.1.0
 ```js
 import canvasToImage from 'canvas-to-image';
 
-canvasToImage(canvasId, options);
+canvasToImage(canvasEl, options);
+
+canvasEl // canvas html element or id attribute of canvas 
 
 options = {
   name: 'custom name', // default image
@@ -34,7 +36,9 @@ options = {
 
 **Download as jpg**
 ```js
-canvasToImage('myCanvas', {
+const canvasEl = document.getElementById('myCanvas');
+
+canvasToImage(canvasEl, {
   name: 'myImage',
   type: 'jpg',
   quality: 0.7
@@ -63,7 +67,9 @@ canvasToImage('myCanvas');
   ...
   <script src="/canvas-to-image/js/canvas-to-image.min.js"></script>
   <script>
-  canvasToImage('myCanvas', {
+  const canvasEl = document.getElementById('myCanvas');
+
+  canvasToImage(canvasEl, {
     name: 'myJPG',
     type: 'jpg',
     quality: 0.5
@@ -82,5 +88,5 @@ canvasToImage('myCanvas');
 ```
 
 ## License
-Copyright (c) 2016 Lasha Kakhidze. This code is released under the [MIT](https://github.com/kaxi1993/canvas-to-image/blob/master/LICENSE) license.
+Copyright (c) 2020 Lasha Kakhidze. This code is released under the [MIT](https://github.com/kaxi1993/canvas-to-image/blob/master/LICENSE) license.
 ***

@@ -286,7 +286,10 @@ var canvasToImage = canvasToImage || (function(view) {
 		var newdt = b64toBlob(dt, "image/png");
 		saveAs(newdt, name);
 	}
-	var canvasToImage = function(canvasId, options, type) {
+	var isElement = function(element) {
+    return element instanceof Element || element instanceof HTMLDocument;
+	}
+	var canvasToImage = function(el, options, type) {
 		// In order to support old code
 		var quality;
 		if(typeof options === "object") {
@@ -297,7 +300,7 @@ var canvasToImage = canvasToImage || (function(view) {
 			name = options || "image";
 			type = type || "png";
 		}
-		var imageCanvas = document.getElementById(canvasId);
+		var imageCanvas = isElement(el) ? el : document.getElementById(el);
 		type = type.toLowerCase();
 		switch(type) {
 			case "jpg": downloadAsJPG(imageCanvas, name, quality); break;

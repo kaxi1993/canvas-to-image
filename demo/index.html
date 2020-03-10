@@ -6,13 +6,15 @@
 	<script>
 	var canvas = document.getElementById("myCanvas");
 	var context = canvas.getContext("2d");
-	context.fillStyle = '#FF0000';
+	context.fillStyle = '#FF69B4';
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	</script>
 
 	<script src="../js/canvas-to-image.min.js"></script>
 	<script>
-	canvasToImage("myCanvas", {
+	const canvasEl = document.getElementById('myCanvas');
+
+	canvasToImage(canvasEl, {
 		name: "myJPG",
 		type: "jpg",
 		quality: 0.5,
