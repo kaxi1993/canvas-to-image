@@ -1,12 +1,11 @@
 {
   "name": "canvas-to-image",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Save Canvas as Image",
   "main": "js/canvas-to-image.min.js",
   "scripts": {},
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kaxi1993/canvas-to-image.git"
+    "url": "https://github.com/kaxi1993/canvas-to-image"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@kaxi1993"
