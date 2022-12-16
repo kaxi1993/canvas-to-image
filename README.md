@@ -92,23 +92,23 @@ export default Canvas;
 <body>
   <canvas id="myCanvas"></canvas>
   ...
-  <script src="/canvas-to-image/js/canvas-to-image.min.js"></script>
+  <script src="./canvas-to-image/js/canvas-to-image.min.js"></script>
   <script>
-  const canvasEl = document.getElementById('myCanvas');
+    const canvasEl = document.getElementById('myCanvas');
 
-  canvasToImage(canvasEl, {
-    name: 'myJPG',
-    type: 'jpg',
-    quality: 0.5
-  });
+    canvasToImage(canvasEl, {
+      name: 'myJPG',
+      type: 'jpg',
+      quality: 0.5
+    });
 
-  canvasToImage('myCanvas', { 
-    name: 'myPNG',
-    type: 'png',
-    quality: 1
-  });
+    canvasToImage('myCanvas', { 
+      name: 'myPNG',
+      type: 'png',
+      quality: 1
+    });
 
-  canvasToImage('myCanvas');
+    canvasToImage('myCanvas');
   </script>
 </body>
 </html>
