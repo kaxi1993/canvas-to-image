@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: sergeysova/jq-action@v2
         with:
-          cmd: jq '.name = "@kaxi1993/canvas-to-image"' package.json
+          cmd: jq '.name = "@kaxi1993/canvas-to-image"' package.json > package.json
       - uses: actions/setup-node@v3
         with:
           node-version: 18
