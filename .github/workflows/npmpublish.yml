@@ -28,6 +28,7 @@ jobs:
         with:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
+          always-auth: true
           scope: '@kaxi1993'
       - run: npm publish
         env:
