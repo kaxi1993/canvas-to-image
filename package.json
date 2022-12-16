@@ -7,9 +7,6 @@
   "repository": {
     "url": "https://github.com/kaxi1993/canvas-to-image"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@kaxi1993"
-  },
   "keywords": [
     "canvas",
     "img",

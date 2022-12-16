@@ -29,7 +29,7 @@ jobs:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
           always-auth: true
-          scope: 'kaxi1993'
+          scope: '@kaxi1993'
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
