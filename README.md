@@ -8,13 +8,13 @@
 ## Installation
 
 ```bash
-$ npm install canvas-to-image
+npm install canvas-to-image
 ```
 
 or 
 
 ```bash
-$ npm install @kaxi1993/canvas-to-image@2.2.0
+npm install @kaxi1993/canvas-to-image@2.2.0
 ```
 
 ## Quick Start
@@ -58,6 +58,39 @@ canvasToImage('myCanvas');
 ```
 
 ## Examples
+
+```js
+import React, { useRef, useEffect } from 'react';
+import canvasToImage from 'canvas-to-image';
+
+
+const Canvas = props => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#000000';
+    ctx.beginPath();
+    ctx.arc(50, 100, 20, 0, 2 * Math.PI);
+    ctx.fill();
+  }, []);
+
+  const handleDownload = async () => {
+    canvasToImage(canvasRef.current);
+  };
+
+  return (
+    <div>
+      <canvas ref={canvasRef} {...props} />
+      <button onClick={handleDownload}>Download</button>
+    </div>
+  );
+}
+
+export default Canvas;
+```
 
 ```html
 <html>
