@@ -11,12 +11,6 @@
 npm install canvas-to-image
 ```
 
-or 
-
-```bash
-npm install @kaxi1993/canvas-to-image@2.2.0
-```
-
 ## Quick Start
 
 ```js
