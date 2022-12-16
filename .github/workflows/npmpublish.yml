@@ -12,41 +12,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 18
       - run: npm ci
       - run: npm test --if-present
-
+      
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
           scope: '@kaxi1993'
-      - run: |
-          npm set registry https://registry.npmjs.org/
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
 
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
+          node-version: 18
+          registry-url: 'https://npm.pkg.github.com'
           scope: '@kaxi1993'
-      - run: |
-          npm set registry https://npm.pkg.github.com/
-          npm publish
+      - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_TOKEN }}
