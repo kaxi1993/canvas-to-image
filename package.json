@@ -1,5 +1,5 @@
 {
-  "name": "@kaxi1993/canvas-to-image",
+  "name": "canvas-to-image",
   "version": "2.2.3",
   "description": "Save Canvas as Image",
   "main": "js/canvas-to-image.min.js",
